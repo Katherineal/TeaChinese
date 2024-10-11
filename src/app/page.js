@@ -16,62 +16,63 @@ import { PreguntasFrecuentes } from '@/components/preguntasFrecuentes';
 
 const teaData = [
   {
-    name: "Green Tea",
-    subtitle: "Nature's Antioxidant Powerhouse",
+    name: "Té verde",
+    subtitle: "El poder antioxidante de la naturaleza",
     image: "https://saboresandinos.com/wp-content/uploads/2023/08/2333.png",
     benefits: [
-      { text: "Strong anti-oxidant", icon: Shield },
-      { text: "Prevent cancer", icon: Heart },
-      { text: "Increases heart health", icon: Heart },
-      { text: "Help strengthen bones", icon: Zap },
-      { text: "Supports memory", icon: Brain },
-      { text: "Keep the youth", icon: Leaf }
+      { text: "Antioxidante", icon: Shield },
+      { text: "Previene cáncer", icon: Heart },
+      { text: "Salud cardíaca", icon: Heart },
+      { text: "Fortalece huesos", icon: Zap },
+      { text: "Mejora memoria", icon: Brain },
+      { text: "Mantiene juventud", icon: Leaf }
     ],
   },
   {
-    name: "Black Tea",
-    subtitle: "A Bold Boost for Body and Mind",
+    name: "Té negro",
+    subtitle: "Un impulso audaz para el cuerpo y la mente",
     image: "https://acdn.mitiendanube.com/stores/118/808/products/whatsapp-image-2022-09-14-at-10-37-13-pm1-f1b22eeda1f8e997a616632632831439-240-0.jpeg",
     benefits: [
-      { text: "Boosts energy", icon: Zap },
-      { text: "Improves focus", icon: Brain },
-      { text: "Lowers cholesterol", icon: Heart },
-      { text: "Reduces blood pressure", icon: Heart },
-      { text: "Promotes gut health", icon: Apple },
-      { text: "Supports immune system", icon: Shield }
+      { text: "Aumenta energía", icon: Zap },
+      { text: "Mejora concentración", icon: Brain },
+      { text: "Baja colesterol", icon: Heart },
+      { text: "Reduce presión", icon: Heart },
+      { text: "Salud intestinal", icon: Apple },
+      { text: "Refuerza inmunidad", icon: Shield }
     ],
   },
   {
-    name: "White Tea",
-    subtitle: "The Delicate Defender of Wellness",
+    name: "Té blanco",
+    subtitle: "El defensor delicado del bienestar",
     image: "https://www.thehouroftea.com/cdn/shop/files/14_11ae7508-f10f-4fdd-bd4b-8c180c49a0b1.png?v=1717096051",
     benefits: [
-      { text: "Rich in antioxidants", icon: Shield },
-      { text: "Promotes healthy skin", icon: Leaf },
-      { text: "Aids in weight loss", icon: Apple },
-      { text: "Improves oral health", icon: Shield },
-      { text: "Supports liver health", icon: Heart },
-      { text: "Reduces inflammation", icon: Zap }
+      { text: "Rico en antioxidantes", icon: Shield },
+      { text: "Piel saludable", icon: Leaf },
+      { text: "Ayuda pérdida peso", icon: Apple },
+      { text: "Salud bucal", icon: Shield },
+      { text: "Salud hepática", icon: Heart },
+      { text: "Reduce inflamación", icon: Zap }
     ],
   }
-]
+];
 const features = [
   {
-    title: "Our History",
-    description: "Discover our rich heritage and passion for tea that spans generations.",
+    title: "Nuestra pasión",
+    description: "Te traemos lo mejor de las hebras de té, seleccionadas con amor y dedicación.",
     icon: MdHistoryEdu,
   },
   {
-    title: "Our Services",
-    description: "Explore our wide range of tea services, from tasting sessions to custom blends.",
+    title: "Calidad garantizada",
+    description: "Ofrecemos solo tés de alta calidad, importados y cuidadosamente elegidos para ti.",
     icon: GiTeapotLeaves,
   },
   {
-    title: "Our Store",
-    description: "Visit our store to experience the finest selection of teas from around the world.",
+    title: "Experiencia única",
+    description: "Disfruta de una experiencia de compra personalizada y asesoría en cada selección.",
     icon: LuMapPin,
   },
 ]
+
 const useScrollAnimation = () => {
   const ref = useRef(null);
   const controls = useAnimation();
@@ -150,22 +151,23 @@ export default function Component() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
           >
-            Título Principal
+            El arte del té en hebras
           </motion.h1>
           <motion.p
-            className="mt-4 text-xl md:text-2xl"
+            className="mt-4 text-xl md:text-2xl font-semibold"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.5 }}
           >
-            Este es el subtexto que acompaña al título principal
+            Sabores que inspiran
           </motion.p>
         </div>
       </section>
 
       <div className="w-full max-w-4xl mx-auto px-6 pt-8">
 
-        {/* Servicios */}
+        {/* Por Qué Elegirnos*/}
+        <div className='md:mb-12'></div>
         <motion.section 
           ref={servicesRef}
           initial="hidden"
@@ -188,7 +190,7 @@ export default function Component() {
               }}
               className="text-3xl md:text-4xl font-bold text-center text-[#96C061] mb-12"
             >
-              Welcome to Tea Shop
+              ¿Por qué elegirnos?
             </motion.h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               {features.map((feature, index) => (
@@ -208,7 +210,7 @@ export default function Component() {
                     <feature.icon className="w-8 h-8 text-white" />
                   </motion.div>
                   <h3 className="text-xl font-semibold text-black mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-600 text-base">{feature.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -216,6 +218,7 @@ export default function Component() {
         </motion.section>
         
         {/* Texto e imagen - informacion */}
+        <div className='md:mb-12'></div>
         <motion.section 
           ref={infoRef}
           initial="hidden"
@@ -236,24 +239,24 @@ export default function Component() {
                 }}
               >
                 <h2 className="text-3xl md:text-4xl font-bold text-[#96C061] mb-4">
-                  Organically Sourced.
-                  <br />
-                  Beautifully Served
+                  Un viaje de sabores y tradición 
                 </h2>
                 <p className="text-gray-700 mb-6">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque semper viverra
-                  lorem sit fringilla. Duis hendrerit inventum metus et lobortis. Curabitur consectetur
-                  volutpat risus. Vivamus quis ex et ex elementum mattis. Phasellus lacinia tempor augue
-                  at consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Nuestro amor por el té 
+                  comenzó con un simple sorbo 
+                  que despertó la curiosidad por 
+                  sus sabores y tradiciones. Así nació 
+                  nuestra tienda, con el deseo de compartir 
+                  las mejores hebras importadas y transmitir el 
+                  conocimiento detrás de cada taza. Queremos que cada 
+                  persona disfrute y descubra este fascinante mundo junto a 
+                  nosotros. ¡Sumate a esta experiencia!
                 </p>
-                <p className="text-gray-700 mb-6">
-                  Pellentesque semper viverra lorem sit fringilla. Duis hendrerit inventum metus et
-                  lobortis. Curabitur consectetur volutpat risus. Vivamus quis ex et ex elementum mattis.
-                  Phasellus lacinia tempor augue at consectetur.
-                </p>
-                <Button className="bg-[#96C061] hover:bg-[#7da350] text-white rounded-sm">
-                  READ MORE
-                </Button>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-[#96C061] text-base hover:bg-[#7da350] text-white rounded-sm transform transition-transform hover:-translate-y-1">
+                    Descubre nuestros sabores
+                  </Button>
+                </a>
               </motion.div>
               <motion.div
                 className="w-full md:w-1/2"
@@ -273,6 +276,7 @@ export default function Component() {
         </motion.section>
 
         {/*Carrusel */}
+        <div id='beneficios' className='md:mb-12'></div>
         <div 
           className="w-full py-8 relative" 
           onMouseEnter={handleMouseEnter} 
@@ -294,13 +298,13 @@ export default function Component() {
                   transition={{ duration: 0.5 }}
                   className="text-3xl md:text-4xl font-bold mb-2 text-center text-[#96C061]"
                 >
-                  Benefits of {teaData[currentSlide].name}
+                  Beneficios del {teaData[currentSlide].name}
                 </motion.h2>
                 <motion.p
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
-                  className="mb-4 text-center"
+                  className="mb-4 text-center text-base"
                 >
                   {teaData[currentSlide].subtitle}
                 </motion.p>
@@ -330,10 +334,10 @@ export default function Component() {
                         className="flex flex-col justify-center items-end w-full"
                       >
                         <div className="flex items-center justify-end w-full">
-                          <p className="text-lg text-[#96C061]">{benefit.text}</p>
+                          <p className="md:text-lg text-sm text-[#96C061]">{benefit.text}</p>
                           <benefit.icon className="w-6 h-6 ml-3 text-[#96C061]" />
                         </div>
-                        <p className="text-gray-600">{benefit.text}</p>
+                        <p className="text-gray-600 text-xs md:text-base">{benefit.text}</p>
                       </motion.div>
                     ))}
                   </motion.div>
@@ -361,9 +365,9 @@ export default function Component() {
                       >
                         <div className="flex items-center justify-start w-full">
                           <benefit.icon className="w-6 h-6 mr-3 text-[#96C061]" />
-                          <p className="text-lg text-[#96C061]">{benefit.text}</p>
+                          <p className="md:text-lg text-sm  text-[#96C061]">{benefit.text}</p>
                         </div>
-                        <p className="text-gray-600">{benefit.text}</p>
+                        <p className="text-gray-600 text-xs md:text-base">{benefit.text}</p>
                       </motion.div>
                     ))}
                   </motion.div>
@@ -385,6 +389,7 @@ export default function Component() {
         </div>
 
         {/* Grid */}
+        <div id='servicios' className='md:mb-12'></div>
         <motion.section 
           ref={gridRef}
           initial="hidden"
@@ -399,7 +404,7 @@ export default function Component() {
           className="w-full py-8"
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {/* New England Breakfast */}
+            {/* Sesiones de Degustación */}
             <motion.div 
               variants={{
                 hidden: { opacity: 0, scale: 0.8 },
@@ -407,16 +412,20 @@ export default function Component() {
               }}
               className="relative bg-gray-100 p-6 rounded-sm overflow-hidden flex flex-col justify-between"
             >
-              <h2 className="text-xl font-semibold mb-2">NEW ENGLAND BREAKFAST</h2>
-              <Button className="bg-[#96C061] hover:bg-[#7da350] text-white rounded-sm mb-4">SHOP NOW</Button>
+              <h2 className="text-xl font-semibold mb-2">Sesiones de degustación</h2>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <Button className="bg-[#96C061] text-base hover:bg-[#7da350] text-white rounded-sm transform transition-transform hover:-translate-y-1 mb-4">
+                  Reserva ahora
+                </Button>
+              </a>
               <img
                 src="https://img.freepik.com/premium-photo/chinese-green-teapot-teacups-wooden-trivet-asian-tea-set-green-tea-set_189959-15528.jpg"
-                alt="New England Breakfast Tea"
-                className="w-full h-full object-cover rounded-sm max-w-[300px] max-h-[200px] mx-auto"
+                alt="Sesiones de Degustación"
+                className="w-full h-full object-cover rounded-sm max-w-[300px] max-h-[200px]"
               />
             </motion.div>
 
-            {/* Tea Cups */}
+            {/* Mezclas Personalizadas */}
             <motion.div 
               variants={{
                 hidden: { opacity: 0, y: 50 },
@@ -426,12 +435,12 @@ export default function Component() {
             >
               <img
                 src="https://images.fineartamerica.com/images/artworkimages/mediumlarge/3/traditional-asian-tea-on-wooden-table-jelena-jovanovic.jpg"
-                alt="Tea Cups with Floating Leaves"
+                alt="Mezclas Personalizadas"
                 className="w-full h-full object-cover rounded-sm max-w-[550px] max-h-[350px] mx-auto"
               />
             </motion.div>
 
-            {/* New Arrivals */}
+            {/* Nuevas Llegadas */}
             <motion.div 
               variants={{
                 hidden: { opacity: 0, scale: 0.8 },
@@ -439,12 +448,16 @@ export default function Component() {
               }}
               className="relative bg-gray-100 p-6 rounded-sm overflow-hidden flex flex-col justify-between"
             >
-              <h2 className="text-xl font-semibold mb-2">NEW ARRIVALS</h2>
-              <p className="mb-4 text-gray-600">We feature carefully crafted tea blends that represent flavors from all across the globe.</p>
-              <Button className="bg-[#96C061] hover:bg-[#7da350] text-white rounded-sm mb-4">MORE →</Button>
+              <h2 className="text-xl font-semibold mb-2">Nuevas llegadas</h2>
+              <p className="mb-4 text-gray-600">Descubre nuestras exclusivas hebras de té seleccionadas para ti.</p>
+              <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                <Button className="bg-[#96C061] text-base hover:bg-[#7da350] text-white rounded-sm transform transition-transform hover:-translate-y-1 mb-4">
+                  Ver más →
+                </Button>
+              </a>
             </motion.div>
 
-            {/* Perfect Brew */}
+            {/* Asesoría Personalizada */}
             <motion.div 
               variants={{
                 hidden: { opacity: 0, x: -50 },
@@ -454,17 +467,21 @@ export default function Component() {
             >
               <img
                 src="https://jcda.ca/sites/default/files/bigstock-green-tea-17093318-500px.jpg"
-                alt="Loose Tea Leaves"
+                alt="Asesoría Personalizada"
                 className="w-full lg:w-1/2 h-48 object-cover rounded-sm mb-4 lg:mb-0 lg:mr-4 max-w-[400px] max-h-[300px] mx-auto"
               />
               <div className="flex flex-col justify-between">
-                <h2 className="text-xl font-semibold mb-2">PERFECT BREW</h2>
-                <p className="mb-4 text-gray-600">Learn how to make the perfect cup of your favorite tea in a variety of tea wares. Easily brew to your taste.</p>
-                <Button className="bg-[#96C061] hover:bg-[#7da350] text-white rounded-sm mb-4">VIEW PRODUCTS →</Button>
+                <h2 className="text-xl font-semibold mb-2">Asesoría personalizada</h2>
+                <p className="mb-4 text-gray-600">Te ayudamos a elegir la mejor mezcla de té para ti, según tus gustos.</p>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-[#96C061] text-base hover:bg-[#7da350] text-white rounded-sm transform transition-transform hover:-translate-y-1 mb-4">
+                    Consulta ahora →
+                  </Button>
+                </a>
               </div>
             </motion.div>
 
-            {/* Tea Ornaments */}
+            {/* Ceremonias de Té */}
             <motion.div 
               variants={{
                 hidden: { opacity: 0, y: 50 },
@@ -474,14 +491,73 @@ export default function Component() {
             >
               <img
                 src="https://img.freepik.com/premium-photo/asian-tea-ceremony-generative-ai_446633-16219.jpg"
-                alt="Tea Ornaments"
+                alt="Ceremonias de Té"
                 className="w-full h-full object-cover rounded-sm max-w-[550px] max-h-[300px] mx-auto"
               />
             </motion.div>
           </div>
         </motion.section>
+        
+        {/* Texto e imagen - instagram */}
+        <div className='md:mb-12'></div>
+        <motion.section 
+          ref={infoRef}
+          initial="hidden"
+          animate={infoControls}
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { duration: 0.5, staggerChildren: 0.2 } }
+          }}
+          className="w-full overflow-hidden gap-6 py-8"
+        >
+          <div className="container mx-auto">
+            <div className="flex flex-col md:flex-row-reverse items-center justify-between">
+              <motion.div
+                className="w-full md:w-1/2 mb-8 md:mb-0 pr-0 md:pr-8"
+                variants={{
+                  hidden: { opacity: 0, x: -100 },
+                  visible: { opacity: 1, x: 0 }
+                }}
+              >
+                <h2 className="text-3xl md:text-4xl font-bold text-[#96C061] mb-4">
+                  ¡Síguenos en Instagram!
+                </h2>
+                <p className="text-gray-700 mb-6">
+                  Descubre los secretos de cada variedad de té, 
+                  nuestras mezclas artesanales y tips para disfrutar 
+                  tu momento de relax perfecto. En nuestro Instagram 
+                  compartimos recetas exclusivas, eventos especiales, 
+                  y promociones que no querrás perderte. Además, podrás 
+                  conocer más sobre los beneficios de nuestros tés y sumarte 
+                  a una comunidad de amantes del té en hebras. 
+                  <br/>
+                  ¡Únete a nuestra familia, síguenos y disfruta de una taza de inspiración diaria!
+                </p>
+                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
+                  <Button className="bg-[#96C061] text-base hover:bg-[#7da350] text-white rounded-sm transform transition-transform hover:-translate-y-1">
+                    Síguenos
+                  </Button>
+                </a>
+              </motion.div>
+              <motion.div
+                className="w-full md:w-1/2"
+                variants={{
+                  hidden: { opacity: 0, x: 100 },
+                  visible: { opacity: 1, x: 0 }
+                }}
+              >
+                <img
+                  src="https://img.freepik.com/fotos-premium/mockup-telefono-inteligente-aislado-fondo-blanco-renderizado-3d_941097-41836.jpg"
+                  alt="Organic tea leaves in a white bowl"
+                  className="w-full h-auto rounded-lg"
+                />
+              </motion.div>
+            </div>
+          </div>
+        </motion.section>
 
         {/*Preguntas frecuentes */}
+        <div id='faq' className='md:mb-12'></div>
         <motion.section 
           ref={faqRef}
           initial="hidden"
@@ -500,6 +576,7 @@ export default function Component() {
       </div>
 
       {/*Testimonios*/}
+      <div id='testimonios' className='md:mb-12'></div>
       <section className="w-full py-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center text-[#96C061] mb-4">
           Testimonios

@@ -5,11 +5,12 @@ import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 
 const menuItems = [
-  { name: "Home", href: "/" },
-  { name: "Shop", href: "/shop" },
-  { name: "About", href: "/about" },
-  { name: "Contact", href: "/contact" },
-]
+  { name: "Tés", href: "#beneficios" },
+  { name: "Servicios", href: "#servicios" },
+  { name: "Preguntas", href: "#faq" },
+  { name: "Testimonios", href: "#testimonios" },
+];
+
 
 export default function MenuResponsive() {
   const [isOpen, setIsOpen] = useState(false)
