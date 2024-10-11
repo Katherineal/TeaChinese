@@ -220,9 +220,7 @@ export default function Component() {
         {/* Texto e imagen - informacion */}
         <div className='md:mb-12'></div>
         <motion.section 
-          ref={infoRef}
-          initial="hidden"
-          animate={infoControls}
+          initial="block"
           variants={{
             hidden: { opacity: 0 },
             visible: { opacity: 1, transition: { duration: 0.5, staggerChildren: 0.2 } }
@@ -266,7 +264,7 @@ export default function Component() {
                 }}
               >
                 <img
-                  src="https://img.freepik.com/fotos-premium/te-hierbas-chino-sobre-fondo-blanco_1130573-109727.jpg"
+                  src="https://img.freepik.com/fotos-premium/hebras-te-extendian-sobre-fondo-blanco-estudio_432236-1532.jpg"
                   alt="Organic tea leaves in a white bowl"
                   className="w-full h-auto rounded-lg"
                 />
