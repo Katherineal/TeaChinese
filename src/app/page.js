@@ -13,6 +13,8 @@ import FooterResponsive from "@/components/footerResponsive"
 import { Testimonios } from "@/components/testimonios"
 import { LuMapPin } from "react-icons/lu";
 import { PreguntasFrecuentes } from '@/components/preguntasFrecuentes';
+import WhatsAppFloat from '@/components/whatsappFloat';
+import ScrollToTop from '@/components/scrolltoTop';
 
 const teaData = [
   {
@@ -583,6 +585,8 @@ export default function Component() {
       </section>
 
       <FooterResponsive/>
+      <ScrollToTop/>
+      <WhatsAppFloat />
     </div>
   )
 }
